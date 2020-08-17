@@ -19,8 +19,8 @@ void loop() {
   // set the brightness of pin 9:
   analogWrite(led, brightness);
 
-  // change the brightness for next time through the loop to makeup a word:
-  brightness = 8;	photon();
+  // change the brightness to makeup a word ( HELLO WORLD! )
+  brightness = 8;	  photon();
   brightness = 5;   photon();
   brightness = 12;  photon();
   brightness = 12;  photon();
@@ -37,7 +37,7 @@ void loop() {
 }
 
 void photon(){
-  if(brightness == 1) {Serial.print('A');}//interpret the 255 division of binary 1(HIGH) into letter.
+  if(brightness == 1) {Serial.print('A');}//Decode 27/255 division of binary 1(HIGH) into ASCII.
   if(brightness == 2) {Serial.print('B');}
   if(brightness == 3) {Serial.print('C');}
   if(brightness == 4) {Serial.print('D');}
@@ -62,6 +62,6 @@ void photon(){
   if(brightness == 23) {Serial.print('W');} 
   if(brightness == 24) {Serial.print('X');}
   if(brightness == 25) {Serial.print('Y');}
-  if(brightness == 26) {Serial.print('Z');}//delay(500);
+  if(brightness == 26) {Serial.print('Z');}
   if(brightness == 27) {Serial.print('!');}
   }
